@@ -70,6 +70,17 @@ body {
     text-align: center;
 }
 
+/* Subtítulo da lista de amigos */
+.subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-top: 10px;
+    text-align: center;
+    display: none; /* Começa invisível */
+}
+
 /* Contêineres de entrada e botão */
 .input-wrapper {
     display: flex;

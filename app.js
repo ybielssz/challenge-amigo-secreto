@@ -15,7 +15,6 @@ function adicionarAmigo() {
     limparCampo();
 }
 
-
 function sortearAmigo() {
     
     if (amigos.length === 0) {
@@ -32,7 +31,6 @@ function sortearAmigo() {
 
 }
 
-
 function limparCampo() {
     nomeAmigo = document.getElementById('amigo');
     nomeAmigo.value = ''; 
@@ -40,7 +38,16 @@ function limparCampo() {
 
 function atualizarLista() {
     let lista = document.getElementById('listaAmigos');
+    let subtitulo = document.getElementById('subtituloLista');
+
     lista.innerHTML = "";
+
+    if (amigos.length > 0) {
+        subtitulo.style.display = 'Block';
+        
+    } else {
+        subtitulo.style.dispay = 'none';     
+    }
 
     amigos.forEach(nome => {
         let item = document.createElement("li");
