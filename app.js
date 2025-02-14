@@ -43,10 +43,13 @@ function atualizarLista() {
     lista.innerHTML = "";
 
     if (amigos.length > 0) {
+        lista.style.display = 'Block';
         subtitulo.style.display = 'Block';
         
     } else {
-        subtitulo.style.dispay = 'none';     
+        lista.style.dispay = 'none';
+        subtitulo.style.dispay = 'none';
+            
     }
 
     amigos.forEach(nome => {
