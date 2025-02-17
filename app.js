@@ -36,6 +36,12 @@ function limparCampo() {
     nomeAmigo.value = ''; 
 }
 
+function limparLista() {
+    amigos = [];
+    atualizarLista();
+
+}
+
 function atualizarLista() {
     let lista = document.getElementById('listaAmigos');
     let subtitulo = document.getElementById('subtituloLista');
@@ -43,12 +49,12 @@ function atualizarLista() {
     lista.innerHTML = "";
 
     if (amigos.length > 0) {
-        lista.style.display = 'Block';
-        subtitulo.style.display = 'Block';
+        lista.style.display = 'block';
+        subtitulo.style.display = 'block';
         
     } else {
-        lista.style.dispay = 'none';
-        subtitulo.style.dispay = 'none';
+        lista.style.display = 'none';
+        subtitulo.style.display = 'none';
             
     }
 
