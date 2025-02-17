@@ -153,7 +153,16 @@ ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: none;
     text-align: center;
+    margin-bottom: 10px;
     
+}
+
+#listaAmigos li {
+    margin-bottom: 10px; 
+    font-size: 18px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
 }
 
 .result-list {
@@ -170,6 +179,23 @@ ul {
     justify-content: center;
     gap: 15px; 
     margin-top: 20px;
+}
+
+.remove-button {
+    background-color: transparent;
+    color: red;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 0;
+    font-weight: bold;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.remove-button:hover {
+    color: darkred;
 }
 
 /* Botões */
@@ -190,13 +216,12 @@ ul {
     cursor: pointer;
 }
 
-.button-clear img,
-.button-draw img {
+.button-clear img,.button-draw img {
     width: 30px; /* Ajuste conforme necessário */
     height: 30px;
 }
 
-.button-clear:hover,
-.button-draw:hover {
+.button-clear:hover, .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+

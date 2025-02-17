@@ -31,17 +31,6 @@ function sortearAmigo() {
 
 }
 
-function limparCampo() {
-    nomeAmigo = document.getElementById('amigo');
-    nomeAmigo.value = ''; 
-}
-
-function limparLista() {
-    amigos = [];
-    atualizarLista();
-
-}
-
 function atualizarLista() {
     let lista = document.getElementById('listaAmigos');
     let subtitulo = document.getElementById('subtituloLista');
@@ -58,10 +47,38 @@ function atualizarLista() {
             
     }
 
-    amigos.forEach(nome => {
+    amigos.forEach((nome, index) => {
         let item = document.createElement("li");
         item.textContent = nome;
+
+    let btnRemover = document.createElement('button');
+    btnRemover.textContent = 'X';
+    btnRemover.classList.add('remove-button');
+
+    btnRemover.onclick = () => {
+        removerAmigo(index);
+    };
+
+        item.appendChild(btnRemover);
         lista.appendChild(item);
+
     });
+
+}
+
+function removerAmigo(index) {
+    amigos.splice(index, 1); 
+    atualizarLista();
+
+}
+
+function limparCampo() {
+    nomeAmigo = document.getElementById('amigo');
+    nomeAmigo.value = ''; 
+}
+
+function limparLista() {
+    amigos = [];
+    atualizarLista();
 
 }
