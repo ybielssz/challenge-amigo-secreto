@@ -78,6 +78,11 @@ function removerAmigo(index) {
     amigos.splice(index, 1); 
     atualizarLista();
 
+    if (amigos.length === 0) {
+        let resultado = document.getElementById('resultado');
+        resultado.innerHTML = '';
+    }
+
 }
 
 function limparCampo() {
@@ -89,4 +94,6 @@ function limparLista() {
     amigos = [];
     atualizarLista();
 
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = '';
 }
