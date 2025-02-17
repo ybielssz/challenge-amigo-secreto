@@ -24,10 +24,9 @@ document.getElementById('amigo').addEventListener('keypress', function(event) {
 });
 
 function sortearAmigo() {
-    
-    if (amigos.length === 0) {
-    alert('A lista de amigos está vazia. Adicione pelo menos um nome antes de sortear.');
-    return;
+    if (amigos.length < 3) {
+        alert('Você precisa adicionar pelo menos 3 amigos para sortear!');
+        return;
     }
 
     let indiceSorteado = Math.floor(Math.random() * amigos.length);
