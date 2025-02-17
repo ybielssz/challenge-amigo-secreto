@@ -30,6 +30,3 @@
 <pre><code>git clone https://github.com/ybielssz/challenge-amigo-secreto.git</code></pre>
 
 <p>Depois de clonar, entre na pasta do projeto e abra o arquivo <code>index.html</code> no seu navegador para rodar a aplicação.</p>
-
-<h2>📄 Licença</h2>
-<p>Este projeto está sob a licença MIT.</p>
