@@ -1,5 +1,7 @@
 let amigos = [];
 
+
+
 function adicionarAmigo() {
 
     let input = document.getElementById('amigo');
@@ -14,6 +16,12 @@ function adicionarAmigo() {
     atualizarLista();
     limparCampo();
 }
+
+document.getElementById('amigo').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        adicionarAmigo(); 
+    }
+});
 
 function sortearAmigo() {
     
